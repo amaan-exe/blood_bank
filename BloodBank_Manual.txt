@@ -1,0 +1,110 @@
+🩸 Blood Bank Management System – User Manual
+
+📋 Overview
+The Blood Bank Management System is a desktop application designed to manage blood donations, receivers, and inventory efficiently.
+It features a user-friendly graphical interface built with Tkinter and stores data using SQLite.
+
+🖥️ System Requirements
+Python 3.7 or later
+
+Required Libraries:
+- tkinter (pre-installed)
+- sqlite3 (pre-installed)
+- Pillow
+- tkcalendar
+
+📦 To install dependencies:
+pip install pillow tkcalendar
+
+🔧 Getting Started
+1. Running the Application
+Run the main Python file:
+python Blood Bank.py
+
+The main window will launch with the following options:
+- Donor Data
+- Receiver Data
+- Available Blood
+- Log Out
+
+🧍‍♂️ Donor Module
+
+➕ Add Donor
+- Click Donor Data.
+- Fill out all required fields: Name, Gender, Address, Mobile Number, etc.
+- Disease status must be No to proceed.
+- Click Add to save the donor.
+- Blood inventory updates automatically.
+
+✏️ Update Donor
+- Select a donor from the table.
+- Modify only Age, Address, or Units.
+- Click Update.
+
+❌ Delete Donor
+- Select the donor → Click Delete.
+- Blood units are subtracted from the inventory.
+
+🔍 Search Donor
+- Use Mobile or ID Number in the search field.
+
+🖨️ Print Slip
+- Click Print to generate a donation receipt.
+
+🧍‍♀️ Receiver Module
+
+➕ Add Receiver
+- Click Receiver Data.
+- Fill out required fields including urgency.
+- Units must not exceed current blood stock.
+- Click Add. Inventory updates automatically.
+
+✏️ Update Receiver
+- Select a receiver → update Age, Address, or Unit.
+- Click Update.
+
+❌ Delete Receiver
+- Select → Click Delete.
+- Blood units are restored to inventory.
+
+🔍 Search Receiver
+- Use Mobile or ID Number to search records.
+
+🖨️ Print Slip
+- Click Print to generate a receipt.
+
+🧪 Blood Inventory Module
+
+📊 View Available Blood
+- Click Available Blood.
+- Shows quantities of each blood type.
+- Click Print Total to export to a text file.
+
+🔐 Login/Register
+
+👤 Register
+- Click "Register Here"
+- Fill form → Passwords must match
+- Includes password recovery question
+
+🔑 Login
+- Enter username and password to log in
+
+📝 Data Structure
+Tables Created:
+- donater
+- receiver
+- total (blood stock by type)
+- login (user accounts)
+
+Tables are created automatically on the first run.
+
+📄 Output Files
+- fg.txt – Donation or receiver receipt (opens in Notepad)
+- filerecord.txt – Export of current blood stock
+
+⚠️ Notes
+- Mobile numbers are validated for Indian format.
+- Donors with diseases are restricted.
+- Updates are allowed for selective fields only.
+- Avoid duplicate mobile or ID numbers.
